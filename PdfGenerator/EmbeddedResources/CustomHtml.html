@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Custom Invoice Html</title>
+      <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
+      crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"> -->
+   </head>
+   <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap'); */
+
+         /* @font-face {
+          font-family: 'Montserrat';
+          src: local('Montserrat-Regular.ttf');
+        } */
+
+        /* @font-face {
+          font-family: "Montserrat-Regular";
+          src: url('data:application/font-sfnt;charset=utf-8;base64,%%Regular%%') format("truetype");
+        }
+        @font-face {
+          font-family: "Montserrat-SemiBold";
+          src: url('data:application/font-sfnt;charset=utf-8;base64,%%SemiBold%%') format("truetype");
+        } */
+        
+
+         /* Use the @page rule to specify the styling for each page when printing */
+         @page {
+          
+            margin: 30mm 10mm 30mm;
+
+        }
+        @page:first {
+            margin: 50mm 10mm 30mm;
+        }
+        
+
+          header {
+                position: fixed;
+                top: -3cm;
+          }
+
+
+            footer {
+                position: fixed;
+                bottom: -2cm;
+            }
+
+
+        html{
+            width: 21cm;
+            height: 29.7cm;
+            padding-top: 0cm;
+            padding-left: 0%;
+            box-sizing: border-box;
+        }
+
+        
+        
+        table{
+            width: 18cm;
+            border-collapse: collapse;
+
+            /* -fs-table-paginate: paginate; */
+        }
+        .bottom-border{
+          border-bottom: solid 0.6px black ;
+        }
+        .top-border{
+          border-top: solid 0.6px black ;
+        }
+        .head-foot-content{
+            text-align: start;
+            font-size: 7pt;
+            vertical-align: bottom;
+            padding: 0pt;
+        }
+
+        .header-display{
+            display: flex;
+            justify-content:flex-end;
+            width: 18cm;
+        }
+
+        .vertical-bottom{
+          vertical-align: bottom;
+        }
+
+        .align-right-text{
+            text-align: right;
+            vertical-align: baseline;
+        }
+        .align-left-text{
+            text-align: left;
+            vertical-align: baseline;
+        }
+        .font-montserrat{
+          font-family:   Montserrat-Regular;
+        }
+        .font-montserrat-sb{
+          font-family: Montserrat-SemiBold;
+          /* font-weight: 600; */
+        }
+        .mt-10{
+          margin-top: 10px;
+          page-break-inside:unset;
+        }
+        .footer{
+          position: absolute;
+          bottom: 1px
+        }
+        .pl-10{
+          padding-left: 30px;
+        }
+        .pb-3{
+          padding-bottom: 3px;
+        }
+        .head-text{
+          font-size: 7pt;
+          margin-top: -1.7cm;
+          margin-bottom: 1.5cm;
+        }
+        .company-info{
+          margin-top: -1.3cm;
+        }
+        .content-table tr td{
+          padding: 10px 5px;
+        }
+
+        
+        
+   </style>
+   <body>
+    
+
+    <header class="header-display head-foot-content font-montserrat pb-3 bottom-border">
+              <!-- <img  src="image1.png" alt="Slika Amida Logo" /> -->
+              <img src=""> 
+        </header>
+
+    <div class="head-text font-montserrat">AMIDA IT-SERVICES GmbH • Waffenschmiedstr. 2 • 81927 München • Germany</div>
+
+
+      <table class="company-info">
+        <tr>
+          <td class="align-left-text font-montserrat" >
+            <p class="font-montserrat-sb">Some Company Gm</p>
+            <p >Some Street 5</p>
+            <p >12345 Some City</p>
+          </td>
+          <td class="align-right-text font-montserrat">
+            <p class="font-montserrat-sb">AMIDA IT-SERVICES GmbH</p>
+            <p >Waffenschmiedstr. 2</p>
+            <p >81927 München</p>
+            <p >(+49) 089 / 200 423 02</p>
+            <p >info@amidait.de</p>
+            <p >www.amidait.de</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="align-left-text font-montserrat">
+            <p class="font-montserrat-sb">Rechnung Nr. 2022-00123</p>
+            <p>Bestellung: 00abc/10ABC/10ABCabc</p>
+          </td>
+          <td class="align-right-text font-montserrat">
+            <p>München, den 28.10.2022</p>
+          </td>
+        </tr>
+      </table>
+
+       
+          <table class="mt-10 content-table">
+            <thead>
+              <tr class="bottom-border">
+                <td class="align-left-text font-montserrat-sb">
+                  <p >Dienstleistung</p>
+                </td>
+                <td class="align-right-text font-montserrat-sb">
+                  <p >Einzelpreis</p>
+                </td>
+                <td class="align-right-text font-montserrat-sb">
+                  <p >Anzahl</p>
+                </td>
+                <td class="align-right-text font-montserrat-sb">
+                  <p>Gesamt</p>
+                </td>
+              </tr>
+            </thead>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr><tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr >
+              <td class="align-left-text font-montserrat">
+                Softwareentwicklung 01
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 €
+              </td>
+              <td class="align-right-text font-montserrat">
+                123 h
+              </td>
+              <td class="align-right-text font-montserrat">
+                123.456.789,00 €
+              </td>
+            </tr>
+
+          
+            <tr class="top-border">
+              <td colspan="3" class="align-right-text font-montserrat-sb">
+                Gesamt:
+              </td>
+              <td class="align-right-text font-montserrat-sb">
+                123.456.789,00 €
+              </td>
+            </tr>
+            <tr class="bottom-border">
+              <td colspan="3" class="align-right-text font-montserrat-sb">
+                19% Mehrwertsteuer:
+              </td>
+              <td class="align-right-text font-montserrat-sb">
+                123.234,00 €
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" class="align-right-text font-montserrat-sb">
+                Gesamtbetrag inkl. Mehrwertsteuer:
+              </td>
+              <td class="align-right-text font-montserrat-sb">
+                123.456.789,00 €
+              </td>
+            </tr>
+
+          </table>
+
+          <footer>
+            <table class="footer">
+              <tr class="top-border">
+                <td class="head-foot-content font-montserrat">
+                  <p>AMIDA IT-SERVICES GmbH</p>
+                  <p>Waffenschmiedstr. 2</p>
+                  <p>81927 München</p>
+                </td>
+                <td class="head-foot-content font-montserrat">
+                  <p>Bank:</p>
+                  <p>IBAN:</p>
+                  <p>BIC:</p>
+                </td>
+                <td class="head-foot-content font-montserrat">
+                  <p>GLS Bank</p>
+                  <p>DE91430609671000938300</p>
+                  <p>GENODEM1GLS</p>
+                </td>
+                <td class="head-foot-content font-montserrat">
+                  <p>Handelsregister:</p>
+                  <p>Nummer:</p>
+                  <p>Ust-IdNr.:</p>
+                </td>
+                <td class="head-foot-content font-montserrat">
+                  <p >Amtsgericht München</p>
+                  <p>HRB 256032</p>
+                  <p>DE332037289</p>
+                </td>
+              </tr>
+            </table>
+          </footer>
+
+</body>
+</html>
